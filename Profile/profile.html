@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Web Application (login logout deta update)</title>
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/animate.css" />
+	<link rel="stylesheet" href="style/style.css" />
+	<link rel="stylesheet" href="../style/style.css" />
+	<noscript>
+		<h1>Enable JavaScript</h1>
+		<style>
+			#mainbox{
+				display: none;
+			}
+			body{
+				background-color: black;
+			}
+
+			h1{
+				color: rgb(234, 234, 234);
+				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+				background-color: yellow;
+				text-align: center;
+			}
+		</style>
+	</noscript>
+ 
+</head>
+<body id="body">
+
+    <div id="profile_box">
+
+        <div class="safeDoc">
+            <img src="../image/logo.png" />
+            <p>SAFE_DOC</p>
+             </div>
+             <div id="profile_pic_up">
+				
+                <i class="fa fa-upload" id="up_icon">Upload <br>Pic</i>
+                
+				<img id="dis_img" />	
+			<input type="file" name="profilePic" id="profile_pic_input" onchange="up_profile()" /> 	
+             </div>
+			 <span id="username"></span>
+			 <span class="glyphicon glyphicon-forward" id="forward_btn"></span>
+    </div>
+    
+	<div class="app_content" id="app_content">
+		<header>
+		  	<h1 id="h_name"></h1>
+            <div class="img" id="h_img"></div>
+            
+		</header>
+		<div class="app_main_box">
+            <div class="item_box" >
+                <div class="item">
+                    <i class="fa fa-shopping-bag"></i>
+                    <span>Business</span>
+                </div>
+                <div class="item">
+                    <i class="fa fa-pencil"></i>
+                    <span>About Me</span>
+                </div>
+                <a href="contact/contact.html">
+                <div class="item">
+                     <i class="fa fa-phone"></i>
+                    <span>Contacts</span>
+                </div>
+                </a>
+                <div class="item">
+                    <a href="player/player.html">
+                     <i class="fa fa-play"></i>
+                    <span>Playlist</span>
+                    </a>
+                </div>
+                <div class="item" onclick="logoutt()">
+                     <i class="fa fa-sign-out"></i>
+                    <span >Logout</span>
+                </div>
+            </div>
+		</div>
+		<footer>
+            <div class="safe_box">
+                <img src="../image/logo.png" />
+                <p >SAFE_DOC</p>
+            </div>
+		</footer>
+	</div>
+
+
+
+   <script>
+        function logoutt(){
+    sessionStorage.clear();
+            
+            setTimeout(function(){
+                window.location="../index.html";
+            },100);
+            
+}
+    function url_secure(){
+    if(sessionStorage.length <= 0)
+        {
+            var page = document.getElementById("profile_box");
+            page.style.display="none";
+            alert("sorry : invalid url entry");
+             window.location = "../index.html"
+        }
+}
+url_secure();
+
+
+function stop_profile(){
+    if(localStorage.getItem(sessionStorage.getItem('user_mail')+"image_url") != null){
+        var hide_profile_pop = document.getElementById("profile_box");
+        hide_profile_pop.style.display="none";
+       
+    }
+  
+    
+}
+stop_profile();
+    </script>
+    <script src="script/script.js"></script>
+	<script src="../script/compatibal.js"></script>  
+</body>
+</html>

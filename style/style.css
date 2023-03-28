@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	box-sizing: border-box;
+}
+h1,p{
+	padding: 0;
+	margin: 0;
+}
+body{
+	padding: 0;
+	margin: 0;
+		
+}
+
+.mainbox{
+	width: 100%;
+	height: 100vh;
+	background: white;
+}
+.mainbox .safeDoc{
+	width:300px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.mainbox .safeDoc img{
+	width: 150px;
+	margin:0 70px 0 70px ;
+	border: 0.5px solid #ccc;
+	padding: 9px;
+}
+.mainbox .safeDoc p{
+	font-size: 50px;
+	color:#FF7466;
+	text-align: center;
+	font-family:'Fascinate Inline', cursive;
+}
+.mainbox .safeDoc i{
+	font-size: 50px;
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.sideForm{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100vh;
+	width:300px;
+	padding:20px;
+	padding-left:40px;
+	box-sizing:border-box;
+	background-color:#FF7466;
+	display: block;
+	box-shadow: 1px 3px 45px rgb(192, 225, 255);
+}
+#closefa{
+	font-size:25px;
+	color:#FF7466;
+	border-radius: 5px;
+	padding: 20px;
+	background-color:white ;
+	padding:2px;
+	float: right;
+	cursor: pointer;
+}
+.mainbox .sideForm .logtext,.signtext{
+	color:white;
+	margin-top:60px;
+	text-align:left;
+}
+.mainbox .sideForm .signtext{
+	margin-top:120px;
+}
+.mainbox .sideForm input[type=text],.mainbox .sideForm input[type=password],.mainbox .sideForm input[type=number],.mainbox .sideForm input[type=email]{
+	width:96%;
+	padding:10px;
+	margin:20px 0 10px 0;
+	border:none;
+	color:rgb(255, 0, 93);
+	font-size: 18px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	text-shadow: 1px 1px 4px #ccc;
+}
+.mainbox .sideForm input[type=text]:focus,.mainbox .sideForm input[type=password]:focus,.mainbox .sideForm input[type=number]:focus,.mainbox .sideForm input[type=email]:focus{
+	border: 2px solid #ffee00;
+    box-shadow: 0 0 3px #ffee00;
+    outline-offset: 0px;
+    outline: none;
+}
+
+.mainbox .sideForm input[type=submit]{
+	padding:9px 15px 9px 15px;
+	background-color:white;
+	border:none;
+	float:right;
+	margin-top:10px;
+	margin-right:13px;
+	cursor: pointer;
+	transition: 0.1s;
+	font-size: 15px;
+	color: rgb(83, 83, 83);	
+}
+.mainbox .sideForm input[type=submit]:hover{
+	font-size: 17px;
+	color:#FF7466;
+	font-weight: bold;
+	cursor: pointer;
+	
+}
+
+.mainbox .sideForm input[type=text] :focus	{
+	outline:none;
+}
+.mainbox .sideForm input::placeholder{
+	font-family: FontAwesome;
+	font-size: 17px;
+	letter-spacing: 1px;
+	text-shadow: none;
+	font-weight: normal;
+}
+@keyframes sidebarform {
+	0%{width:0;}
+	100%{width:300px;}
+}
+@keyframes sidebarformclose{
+	0%{width: 300px;}
+	100%{width: 0px;}
+}

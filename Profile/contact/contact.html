@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Web Application (login logout deta update)</title>
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/animate.css" />
+	<link rel="stylesheet" href="style/style.css" />
+	
+	<noscript>
+		<h1>Enable JavaScript</h1>
+		<style>
+			#mainbox{
+				display: none;
+			}
+			body{
+				background-color: black;
+			}
+
+			h1{
+				color: rgb(234, 234, 234);
+				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+				background-color: yellow;
+				text-align: center;
+			}
+		</style>
+	</noscript>
+ 
+</head>
+<body>
+    <div class="s_mbox">
+    <div class="up_logo_box">
+        <img src="img/tringle.png" />
+        <div class="profile_pic" id="profile_pic"></div>
+    </div>
+    <div class="p_c_mbox">
+        <div class="p_c_text">
+        <h1>Private Contacts</h1>
+        </div>
+        <div class="p_c_box" id="pc_box">
+            <i class="fa fa-plus-circle" id="p_logo"></i>
+            <input type="text" name="name" placeholder="Fullname..." id="nbox"/>
+            <input type="number" name="fnumber" placeholder="Primary number..." id="fnumber" />
+            <input type="number" name="snumber" placeholder="Secondary number..." id="snumber" />
+            <input type="button" value="save" id="sbutton" onclick="add_contact()" />
+             <p id="c_save_pop"></p>
+        </div>
+    </div>
+    </div>
+    <div class="c_l_mbox">
+        <div class="c_l_text">
+            <h1 id="c_l_t">Contact list</h1>
+            <input type="text" name="search" id="c_search" placeholder="search contacts here..." onInput="search_c(this)" />
+        </div>
+        <div id="c_list">
+        
+        </div>
+          
+    </div>
+   
+
+  
+    
+    
+    
+    
+    
+    
+    
+    <script>
+     
+        function url_secure(){
+    if(sessionStorage.length <= 0)
+        {
+            alert("sorry : invalid url entry");
+            //window.history.back();
+            window.location = "../../index.html"
+        }
+}
+url_secure();
+
+
+    </script>
+    <script src="script/script.js"></script>
+	<script src="../script/compatibal.js"></script>  
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .m_box{
+            width: 70%;
+            height: 75vh;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 8px #ddd;
+            border-radius: 10px;
+            position: relative;
+            left: 14.8%;
+            right: 14.8%;
+            top: 10vh;
+            background-color: #ddd ;
+
+        }
+        .m_box_top{
+            width: 100%;
+            height: 10vh;
+            background-color: yellow;
+        }
+        .m_box .m_box_top h1{
+            float: left;
+            margin: 0;
+            padding: 0;
+            padding: 2.5vh 0 0 15px;
+            font-family: sans-serif;
+        }
+        .m_box .m_box_top i{
+            float: right;
+            font-size: 30px;
+            padding-top:20px;
+            padding-right: 20px;
+        }
+        .m_box .sub_box1{
+            width: 70%;
+            height: 64vh;
+            float: left;
+            background-color: aqua;
+        }
+        .m_box .sub_box2{
+            width: 30%;
+            height: 64vh;
+            float: left;
+            background-color:burlywood;
+        }
+        .m_box .sub_box1 .player{
+            width: 100%;
+            height:58vh ;
+            background-color: red;
+        }
+        .m_box .sub_box1 .player video{
+            width: 100%;
+            height: auto;
+        }
+        .m_box .sub_box1 .controls{
+            width: 100%;
+            height: 6vh;
+            float: left;
+            background-color: #ddd;
+        }
+        .m_box .sub_box1 .controls i{
+            font-size: 30px;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+        }
+        .m_box .sub_box1 .controls #timmer{
+            float: left;
+            padding-left: 10px;
+        }
+        .m_box .sub_box1 .controls .progress_main{
+            width: 75%;
+            height: 2vh;
+            border: 1px solid #ccc;
+            background-color: white;
+            float: left;
+            margin-top: 18px;
+            margin-left: 10px;
+            border-radius: 10px;
+        }
+        .m_box .sub_box1 .controls .progress_main .progress_sub{
+            width: 10%;
+            height: 2vh;
+            background-color: rgb(4, 210, 4);
+            float: left;
+            border-radius: 10px;
+            
+        }
+        .m_box .sub_box1 .controls .progress_main .progress_sub .progress_per{
+            float: right;
+            padding: 2px;
+            border: 0px solid #ccc;
+            border-radius: 100%;
+            margin: -5px -10px 0 0 ;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="m_box">
+        <div class="m_box_top">
+            <h1>Gulab Jaisan Khilal Badu</h1>
+            <i class='fa fa-share' style="padding-right:20px"></i>
+            <i class="fa fa-thumbs-down"></i>
+            <i class="fa fa-thumbs-up"></i>
+        </div>
+        <div class="sub_box1">
+            <div class="player">
+                <video src="tum.mp4" controls="controls" id="video" ontimeupdate="timer()"></video>
+            </div>
+            <div class="controls">
+                <i class="fa fa-play" id="playpouse" onclick="playpause()"></i>
+                <p id="timmer">00/00</p>
+                <div class="progress_main">
+                    <div class="progress_sub" id="progress">
+                        <span class="progress_per" id="percent">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub_box2"></div>
+    </div>
+    <!-- <h1>player</h1>
+    <video width="720px" height="480px" controls="controls" id="video" ontimeupdate="timer()">
+        <source src="heeroin.mp4"></source>
+    </video>
+    <p id="result">time progress</p>
+    <button onclick="print()">print</button>
+    <script>
+        function timer(){
+            var video = document.getElementById("video");
+            var result = document.getElementById("result");
+            var curr_time = video.currentTime/60;
+            var dur_time = video.duration/60;
+            result.innerHTML = curr_time.toFixed(2)+ "/" + dur_time.toFixed(2);
+        }
+    </script>
+    this.className+= "fa fa-pause";
+-->
+
+    <script>
+        function timer(){
+            var video = document.getElementById("video");
+            var timmer = document.getElementById("timmer");
+            var percent = document.getElementById("percent");
+            var progress = document.getElementById("progress");
+            var curr_time = video.currentTime/60;
+            var dur_time = video.duration/60;
+            timmer.innerHTML = curr_time.toFixed(1)+ "/" + dur_time.toFixed(1);
+            percent.innerHTML = ((curr_time * 100 ) / dur_time).toFixed(0) + "%";
+            progress.style.width = ((curr_time * 100 ) / dur_time).toFixed(3) + "%";
+        }
+        
+        function playpause(){
+            var video = document.getElementById("video");
+                if(video.paused){
+                    video.play();
+                    this.className+= "fa fa-pause";
+                }
+                else{
+                    video.paused();
+                    this.className+= "fa fa-play";
+                }
+            
+        }
+    </script>
+
+</body>
+</html>

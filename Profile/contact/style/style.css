@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+   
+    
+}
+.s_mbox{
+    width:77.9%;
+    height: 100vh;
+    float: left;
+    position: fixed;
+    border: 0px solid green;
+}
+.s_mbox .up_logo_box{
+    width: 155px;
+    height: auto;
+    border:0px solid green ;
+    float: left;
+    
+}
+.s_mbox .up_logo_box img{
+    width: 150px;
+    float: left;
+    
+}
+.s_mbox .up_logo_box .profile_pic{
+    width:120px;
+    height: 120px;
+    border-radius: 100%;
+    background: yellow;
+    position: relative;
+    top:20px;
+    left: 20px;
+}
+.p_c_mbox{
+    width: 400px;
+    height: 500px;
+    float: right;
+    border: 0px solid red;
+    transform: translate(-250px, 100px);
+    
+}
+.p_c_mbox .p_c_text{
+    width: 400px;
+    height: 100px;
+    border: 0px solid blue;
+}
+.p_c_mbox .p_c_box{
+    width: 395px;
+    height: 360px;
+    border-left: 5px solid #FF7466;
+    border-bottom: 5px solid #FF7466;
+}
+.p_c_mbox .p_c_box #fnumber,.p_c_mbox .p_c_box #snumber,.p_c_mbox .p_c_box #nbox,.p_c_mbox .p_c_box #sbutton{
+    width:85%;
+    height: 55px;
+    float: right;
+    border: none;
+    border-left: 8px solid #008aff;
+    box-shadow: 2px 2px 4px #ccc;
+    margin-top: 30px;
+    outline: none;
+    font-size: 18px; 
+    font-family: sans-serif;
+    padding-left: 15px;
+} 
+
+.p_c_mbox .p_c_box #sbutton{
+    width:20%;
+    height: 50px;
+    border: none;
+    background-color: yellow;
+    padding-left: 0;
+    
+}
+.c_l_mbox{
+    width:22%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 130px 10px 10px 10px;
+    word-wrap: break-word;
+}
+.c_l_mbox .c_l_text{
+    position: fixed;
+    width: 20%;
+    height: 130px;
+    border: 0px solid red;
+    padding: 0px 0 0 20px; 
+    background:black;
+    top: 0px;
+    z-index: 1;
+}
+.c_l_mbox .c_l_text h1{
+    color: white;
+}
+.c_l_mbox .c_l_text input{
+    padding: 7px;
+    border: none;
+    outline: none;
+    width: 80%;
+    box-shadow: border-box;
+}
+.s_mbox .p_c_mbox h1{
+    padding: 0;
+    margin: 0;
+    color: #008aff;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.s_mbox .p_c_mbox i{
+    font-size: 60px;
+    color: #FF7466;
+    transform: translate(-29px,-50px);
+}
+.c_l_mbox .c_l_box{
+    width: 100%;
+    height: auto;
+    border:0px solid blue;
+    transform: translateY(130px);
+    overflow-x:inherit;
+    word-wrap: break-word;
+}
+.s_mbox .p_c_mbox .p_c_box #c_save_pop{
+    color: red;
+    padding: 0;
+    margin: 0;
+    float: left;
+    padding: 5px;
+    margin: 20px 0 0 60px;
+    font-family: calibri;
+}
+.c_l_mbox #c_list{
+    width: 100%;
+    height: 100px;
+    border: 0px solid green;
+}
+.c_l_mbox #c_list fieldset legend{
+    color:yellow;
+    font-family: calibri;
+    font-weight: bold;
+    letter-spacing: 2px;
+   
+}
+.c_l_mbox #c_list fieldset{
+    display: block;
+    color: white;
+   
+    border: 0px solid red;
+}
+.c_l_mbox #c_list fieldset ol{
+   
+    border: 0px solid yellow; 
+}
+.c_l_mbox #c_list fieldset ol li{
+    border: none;
+    outline: none;
+}
+.c_l_mbox fieldset #delete-icon{
+    float: right;
+    color:yellow;
+    font-size: 30px;
+    margin-top:-30px;
+    cursor: pointer;
+    
+}
