@@ -113,7 +113,7 @@ function login(){
     } 
     else{
         if(localStorage.getItem(user_detail.username).match(user_detail.password)){
-            location.replace("profile/profile.html");
+            location.replace("profile/index.html");
             sessionStorage.setItem('user_mail',username); 
             return false;
         }
