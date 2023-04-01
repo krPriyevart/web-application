@@ -39,11 +39,15 @@
 		<div class="sideForm" id="sideform">
 		<i class="fa fa-close" id="closefa" onclick="sidebarclose()"></i>
 		<h1 class="logtext">Login User!</h1>
-			<form   onsubmit="return login()" >
+			<!-- <form   onsubmit="return login()" >
 				<input type="email" name="username" id="l_email" placeholder="&#xf2bd; username"/>
 				<input type="password" name="password" id="l_password" placeholder="&#xf023; password"/>
-				<input type="submit" value="Login" />
-			</form>
+				<input type="submit" value="Login" /> 
+			</form> -->
+			
+				<input type="email" name="username" id="l_email" placeholder="&#xf2bd; username"/>
+				<input type="password" name="password" id="l_password" placeholder="&#xf023; password"/>
+				<a href="profile/index.html"><input type="submit" value="Login"  /></a> 
 		<h1 class="signtext">Signup User!</h1>
 			<form method="post" autocomplete="off" onsubmit="return signup()" >
 				<input type="text" name="yourname" id="username" placeholder="&#xf2bd; name"/>
